@@ -1,14 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
     <div className="md:flex gap-4">
-      <li>Home</li>
-      <li>About</li>
+      <NavLink to="/">
+        <li>Home</li>
+      </NavLink>
+      <NavLink to="/about">
+        <li>About</li>
+      </NavLink>
     </div>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
