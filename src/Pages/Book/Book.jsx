@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const Book = ({ data, singleBook }) => {
   //   const data = use(bookPromise);
-  console.log(singleBook);
+  // console.log(singleBook);
 
   const {
     bookName,
@@ -26,8 +26,8 @@ const Book = ({ data, singleBook }) => {
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="flex justify-center gap-4">
             {" "}
-            {tags.map((tag) => (
-              <button className="">{tag}</button>
+            {tags.map((tag, index) => (
+              <button key={index}>{tag}</button>
             ))}
           </div>
           <h2 className="card-title">
